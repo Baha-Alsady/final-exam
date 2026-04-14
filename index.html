@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>James Smith Portfolio - UI/UX Designer</title>
+    <style>
+        :root {
+            --primary-color: #ff5c31;
+            ;
+        }
+
+
+
+
+        .navbar-nav .nav-link {
+            color: var(--text-dark);
+            font-weight: 500;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .nav-link:hover {
+            color: #ff5c31;
+
+
+        }
+
+        .btn-components {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 20px;
+            padding: 5px 20px;
+            font-size: 14px;
+        }
+
+        .hero-section {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-weight: 600;
+        }
+
+        .btn-hire {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 20px;
+            margin-right: 5px;
+            font-size: small;
+            font-weight: bold;
+        }
+
+        .btn-download {
+            background-color: #444;
+            color: white;
+            padding: 5px 20px;
+            font-size: small;
+            font-weight: bold;
+
+        }
+
+        .social-icons a {
+            color: var(--primary-color);
+            margin-right: 10px;
+            text-decoration: none;
+            border: 1px solid var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: small;
+
+        }
+
+        .stats-container {
+            margin-top: -50px;
+            background: white;
+            border-radius: 100px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            position: relative;
+            top: -130px;
+
+        }
+
+        .stat-item h3 {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .about-section {
+            padding: 100px 0;
+        }
+
+        .about-img {
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            z-index: 999;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+            color: white;
+        }
+
+
+        @keyframes floatLogo {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+        .navbar-brand img {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            animation: floatLogo 3s ease-in-out infinite;
+
+            display: inline-block;
+        }
+
+
+        .navbar-brand:hover img {
+            transform: scale(1.15) rotate(5deg);
+
+            filter: drop-shadow(0 5px 15px rgba(255, 99, 71, 0.4));
+
+            animation-play-state: paused;
+
+        }
+
+
+        .navbar-brand {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container text-muted">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.svg" alt="Logo" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <nav class="navbar-nav ms-auto align-items-center">
+                    <a class="nav-link text-danger" href="#">Home</a>
+                    <a class="nav-link" href="#">about</a>
+                    <a class="nav-link" href="#">Service</a>
+                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link" href="#">Testimonial</a>
+                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="#">Contact</a>
+                    <a class="btn btn-components ms-lg-3" href="#">components</a>
+                </nav>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-muted">
+                    <h2 class="mb-0 ">hello, I'm</h2>
+                    <h1 class="hero-title">James Smith</h1>
+                    <p class="hero-subtitle mb-4 text-muted">UI/UX Designer</p>
+                    <div class="mb-4">
+                        <button class="btn btn-hire rounded-pill">HIRE ME</button>
+                        <button class="btn btn-download text-uppercase rounded-pill">Download CV</button>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f "></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="./img/man.svg" alt="Illustration" class="img-fluid w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row stats-container text-center mx-auto">
+            <div class="col-md-4 stat-item">
+                <h3>126</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="col-md-4 stat-item border-start border-end">
+                <h3>457</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="col-md-4 stat-item">
+                <h3>772</h3>
+                <p>Happy Clients</p>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="about-section">
+        <div class="container ">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <img src="./img/avatar.jpg" alt="James Smith" class="about-img shadow-sm  " style="width: 75%;">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="fw-bold text-muted">James Smith</h2>
+                    <p class="text-danger mb-4 text-muted">UI/UX Designer</p>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, pariatur,
+                        aperiam aut autem voluptas odit. Odio ducimus delectus totam sed aliquam sequi praesentium
+                        mollitia, illum repudiandae quidem quod, magni magnam.</p>
+                    <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident,
+                        pariatur, aperiam aut autem voluptas odit. Odio ducimus delectus totam sed aliquam sequi
+                        praesentium mollitia, illum repudiandae quidem quod, magni magnam.</p>
+                    <button class="btn btn-hire rounded-pill">DOWNLOAD CV</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTop");
+
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                backToTopBtn.style.display = "flex";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        }
+
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+    <sc src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></sc>
+</body>
+
+</html>
